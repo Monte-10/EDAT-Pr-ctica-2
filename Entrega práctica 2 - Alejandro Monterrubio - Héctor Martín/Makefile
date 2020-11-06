@@ -33,9 +33,6 @@ shell:
 	@echo create psql shell
 	@$(PSQL)  
 
-allqueries: query1 query2 query3 query4 query5 query6
-	@cat query?.log > all_queries.log
-
-compile: menu.o productsStock.o productsFind.o odbc.o
-			$(CC) menu.o productsStock.o productsFind.o odbc.o -lodbc -o menu
+compile: menu.o productsStock.o productsFind.o ordersOpen.o ordersRange.o ordersDetail.o customersFind.o customersListProducts.o customersBalance.o odbc.o
+			$(CC) menu.o productsStock.o productsFind.o ordersOpen.o ordersRange.o ordersDetail.o customersFind.o customersListProducts.o customersBalance.o odbc.o -lodbc -o menu
 			rm *.o

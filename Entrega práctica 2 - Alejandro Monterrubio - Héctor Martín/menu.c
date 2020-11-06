@@ -118,21 +118,24 @@ void ShowProductsMenu() {
     int nChoice = 0;
     char productcode[512];
     char productname[512];
-    char buf[16]
+    char buf[16];
+
     do {
         nChoice = ShowProductsSubMenu();
         switch (nChoice) {
 
             case 1: {
-                printf ("Introduce productcode: ");
+                printf ("Introduce productcode > ");
                 scanf ("%s",productcode);
+                fgets(buf, 16, stdin);
                 ProductsStock(productcode);
             }
                 break;
 
             case 2: {
-                printf ("Introduce productname: ");
+                printf ("Introduce productname > ");
                 scanf ("%s",productname);
+                fgets(buf, 16, stdin);
                 ProductsFind(productname);
             }
                 break;
@@ -193,22 +196,31 @@ void ShowProductsMenu() {
 
 void ShowOrdersMenu() {
     int nChoice = 0;
-
+    char date1[512];
+    char date2[512];
+    int ordernumber;
+    char buf[16];
     do {
         nChoice = ShowOrdersSubMenu();
         switch (nChoice) {
             case 1: {
-                /*OrdersOpen();*/
+                OrdersOpen();
             }
                 break;
 
             case 2: {
-                /*OrdersRange();*/
+                printf("Introduce dos fechas con el siguiente formato (YYYY-MM-DD - YYYY-MM-DD) > ");
+                scanf ("%s - %s", date1, date2);
+                fgets(buf, 16, stdin);
+                OrdersRange(date1,date2);
             }
                 break;
 
             case 3: {
-                /*OrdersDetail();*/
+                printf("Introduce un ordernumber > ");
+                scanf ("%d", &ordernumber);
+                fgets(buf, 16, stdin);
+                OrdersDetail(ordernumber);
             }
                 break;
 
@@ -266,22 +278,34 @@ void ShowOrdersMenu() {
 
 void ShowCustomersMenu() {
     int nChoice = 0;
+    int customernumber;
+    char name[512];
+    char buf[16];
     do {
         nChoice = ShowCustomersSubMenu();
         switch (nChoice) {
 
             case 1: {
-                /*CustomersFind();*/
+                printf("Introduce un nombre > ");
+                scanf ("%s", name);
+                fgets(buf, 16, stdin);
+                CustomersFind(name);
             }
                 break;
 
             case 2: {
-                /*CustomersListProducts();*/
+                printf("Introduce customernumber > ");
+                scanf ("%d", customernumber);
+                fgets(buf, 16, stdin);
+                CustomersListProducts(customernumber);
             }
                 break;
 
             case 3: {
-                /*CustomersBalance();*/
+                printf("Introduce customernumber > ");
+                scanf ("%d", customernumber);
+                fgets(buf, 16, stdin);
+                CustomersBalance(customernumber);
             }
                 break;
 

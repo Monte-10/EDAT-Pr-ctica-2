@@ -14,7 +14,7 @@ static int ShowCustomersSubMenu();
 /**
  * @file menu.c
  * @author Alejandro Monterrubio y Héctor Martín
- * @date 28 Abril 2020
+ * @date 9 de Noviembre 2020
  * @brief El archivo tiene el menú y los submenús
  *
  * El programa nos deja elegir entre Products, Orders,
@@ -295,7 +295,7 @@ void ShowCustomersMenu() {
 
             case 2: {
                 printf("Introduce customernumber > ");
-                scanf ("%d", customernumber);
+                scanf ("%d", &customernumber);
                 fgets(buf, 16, stdin);
                 CustomersListProducts(customernumber);
             }
@@ -303,7 +303,7 @@ void ShowCustomersMenu() {
 
             case 3: {
                 printf("Introduce customernumber > ");
-                scanf ("%d", customernumber);
+                scanf ("%d", &customernumber);
                 fgets(buf, 16, stdin);
                 CustomersBalance(customernumber);
             }

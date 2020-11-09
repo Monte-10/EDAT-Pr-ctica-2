@@ -29,6 +29,7 @@ int CustomersFind(char* name) {
     snprintf(aux, 512, "%c%s%c", '%', name, '%');
 
     SQLBindParameter(stmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 0, 0, aux, 0, NULL);
+    SQLBindParameter(stmt, 2, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 0, 0, aux, 0, NULL);
 
     SQLExecute(stmt);
 
@@ -37,7 +38,7 @@ int CustomersFind(char* name) {
         ret = SQLGetData(stmt, 1, SQL_C_CHAR, customername, sizeof(customername), NULL);
         ret = SQLGetData(stmt, 2, SQL_C_CHAR, contactfirstname, sizeof(contactfirstname), NULL);
         ret = SQLGetData(stmt, 3, SQL_C_CHAR, contactlastname, sizeof(contactlastname), NULL);
-        ret = SQLGetData(stmt, 4, SQL_C_SLONG, customernumber, sizeof(SQLINTEGER), NULL);
+        ret = SQLGetData(stmt, 4, SQL_C_SLONG, &customernumber, sizeof(SQLINTEGER), NULL);
         printf("%s %s %s %d\n", customername, contactfirstname, contactlastname, customernumber);
     }
 

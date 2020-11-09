@@ -11,8 +11,9 @@ int OrdersDetail(int number) {
     SQLHDBC dbc;
     SQLHSTMT stmt, stmt2;
     SQLRETURN ret; /* ODBC API return status */
-    SQLINTEGER ordernumber, quantityordered, priceeach, coste;
-    SQLCHAR* orderdate[512], status[512], productcode[512];
+    SQLINTEGER quantityordered;
+    SQLDOUBLE coste, priceeach;
+    SQLCHAR orderdate[512], status[512], productcode[512];
 
 
     /* CONNECT */
@@ -24,22 +25,22 @@ int OrdersDetail(int number) {
     /* Allocate a statement handle */
     SQLAllocHandle(SQL_HANDLE_STMT, dbc, &stmt);
 
-    SQLPrepare(stmt, (SQLCHAR*) "select orderdate, status, sum(quantityordered*priceeach) as coste from orders natural join ordersdetail where ordernumber = ? group by ordernumber", SQL_NTS); /*Query*/
-    SQLBindParameter(stmt, 1, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &ordernumber, 0, NULL);
+    SQLPrepare(stmt, (SQLCHAR*) "select orderdate, status, sum(quantityordered*priceeach) as coste from orders natural join orderdetails where ordernumber = ? group by ordernumber", SQL_NTS); /*Query*/
+    SQLBindParameter(stmt, 1, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &number, 0, NULL);
     SQLExecute(stmt);
 
     /* Loop through the rows in the result-set */
     while (SQL_SUCCEEDED(ret = SQLFetch(stmt))) {
         ret = SQLGetData(stmt, 1, SQL_C_CHAR, orderdate, sizeof(orderdate), NULL);
         ret = SQLGetData(stmt, 2, SQL_C_CHAR, status, sizeof(status), NULL);
-        ret = SQLGetData(stmt, 3, SQL_C_DOUBLE, coste, sizeof(SQLINTEGER), NULL);
-        printf("Orderdate > %s - Status > %s\n Coste > %.2f", orderdate, status, coste);
+        ret = SQLGetData(stmt, 3, SQL_C_DOUBLE, &coste, sizeof(coste), NULL);
+        printf("Orderdate > %s - Status > %s\n Coste > %.2f\n", orderdate, status, coste);
     }
 
     SQLAllocHandle(SQL_HANDLE_STMT, dbc, &stmt2);
 
     SQLPrepare(stmt2, (SQLCHAR*) "select productcode, quantityordered, priceeach from orderdetails where ordernumber = ? order by orderlinenumber", SQL_NTS); /*Query*/
-    SQLBindParameter(stmt2, 1, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &ordernumber, 0, NULL);
+    SQLBindParameter(stmt2, 1, SQL_PARAM_INPUT, SQL_C_SLONG, SQL_INTEGER, 0, 0, &number, 0, NULL);
         
     SQLExecute(stmt2);
 
@@ -48,7 +49,7 @@ int OrdersDetail(int number) {
         ret = SQLGetData(stmt2, 1, SQL_C_CHAR, productcode, sizeof(productcode), NULL);
         ret = SQLGetData(stmt2, 2, SQL_C_SLONG, &quantityordered, sizeof(SQLINTEGER), NULL);
         ret = SQLGetData(stmt2, 3, SQL_C_DOUBLE, &priceeach, sizeof(SQLINTEGER), NULL);
-        printf("%s %d %.2f", productcode, quantityordered, priceeach);
+        printf("%s %d %.2f\n", productcode, quantityordered, priceeach);
     }
 
     SQLCloseCursor(stmt);

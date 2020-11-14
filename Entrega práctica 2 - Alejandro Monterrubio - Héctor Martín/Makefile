@@ -33,6 +33,6 @@ shell:
 	@echo create psql shell
 	@$(PSQL)  
 
-compile: menu.o productsStock.o productsFind.o ordersOpen.o ordersRange.o ordersDetail.o customersFind.o customersListProducts.o customersBalance.o odbc.o
-			$(CC) menu.o productsStock.o productsFind.o ordersOpen.o ordersRange.o ordersDetail.o customersFind.o customersListProducts.o customersBalance.o odbc.o -lodbc -o menu
+compile: menu.o odbc.o
+			$(CC) menu.o odbc.o -lodbc -o menu
 			rm *.o

@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "productsStock.c"
+#include "productsFind.c"
+#include "ordersDetail.c"
+#include "ordersRange.c"
+#include "ordersOpen.c"
+#include "customersListProducts.c"
+#include "customersFind.c"
+#include "customersBalance.c"
+
+
 static int ShowMainMenu();
 static void ShowProductsMenu();
 static int ShowProductsSubMenu();
@@ -126,17 +136,17 @@ void ShowProductsMenu() {
 
             case 1: {
                 printf ("Introduce productcode > ");
-                scanf ("%s",productcode);
-                fgets(buf, 16, stdin);
-                ProductsStock(productcode);
+                (void) scanf ("%s",productcode);
+                (void) fgets(buf, 16, stdin);
+                (void) ProductsStock(productcode);
             }
                 break;
 
             case 2: {
                 printf ("Introduce productname > ");
-                scanf ("%s",productname);
-                fgets(buf, 16, stdin);
-                ProductsFind(productname);
+                (void) scanf ("%s",productname);
+                (void) fgets(buf, 16, stdin);
+                (void) ProductsFind(productname);
             }
                 break;
 
@@ -204,23 +214,23 @@ void ShowOrdersMenu() {
         nChoice = ShowOrdersSubMenu();
         switch (nChoice) {
             case 1: {
-                OrdersOpen();
+                (void) OrdersOpen();
             }
                 break;
 
             case 2: {
                 printf("Introduce dos fechas con el siguiente formato (YYYY-MM-DD - YYYY-MM-DD) > ");
-                scanf ("%s - %s", date1, date2);
-                fgets(buf, 16, stdin);
-                OrdersRange(date1,date2);
+                (void) scanf ("%s - %s", date1, date2);
+                (void) fgets(buf, 16, stdin);
+                (void) OrdersRange(date1,date2);
             }
                 break;
 
             case 3: {
                 printf("Introduce un ordernumber > ");
-                scanf ("%d", &ordernumber);
-                fgets(buf, 16, stdin);
-                OrdersDetail(ordernumber);
+                (void) scanf ("%d", &ordernumber);
+                (void) fgets(buf, 16, stdin);
+                (void) OrdersDetail(ordernumber);
             }
                 break;
 
@@ -287,25 +297,25 @@ void ShowCustomersMenu() {
 
             case 1: {
                 printf("Introduce un nombre > ");
-                scanf ("%s", name);
-                fgets(buf, 16, stdin);
-                CustomersFind(name);
+                (void) scanf ("%s", name);
+                (void) fgets(buf, 16, stdin);
+                (void) CustomersFind(name);
             }
                 break;
 
             case 2: {
                 printf("Introduce customernumber > ");
-                scanf ("%d", &customernumber);
-                fgets(buf, 16, stdin);
-                CustomersListProducts(customernumber);
+                (void) scanf ("%d", &customernumber);
+                (void) fgets(buf, 16, stdin);
+                (void) CustomersListProducts(customernumber);
             }
                 break;
 
             case 3: {
                 printf("Introduce customernumber > ");
-                scanf ("%d", &customernumber);
-                fgets(buf, 16, stdin);
-                CustomersBalance(customernumber);
+                (void) scanf ("%d", &customernumber);
+                (void) fgets(buf, 16, stdin);
+                (void) CustomersBalance(customernumber);
             }
                 break;
 

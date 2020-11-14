@@ -7,42 +7,44 @@
 
 
 int ProductsStock(char* productcode) {
-    SQLHENV env;
-    SQLHDBC dbc;
-    SQLHSTMT stmt;
-    SQLRETURN ret; /* ODBC API return status */
-    SQLINTEGER stock;
+    SQLHENV env = 0;
+    SQLHDBC dbc = 0;
+    SQLHSTMT stmt = 0;
+    SQLRETURN ret = 0; /* ODBC API return status */
+    SQLINTEGER stock = 0;
 
 
     /* CONNECT */
-    ret = odbc_connect(&env, &dbc);
+    ret = (SQLRETURN)odbc_connect(&env, &dbc);
     if (!SQL_SUCCEEDED(ret)) {
+        odbc_extract_error("", stmt, SQL_HANDLE_ENV);
         return EXIT_FAILURE;
     }
 
     /* Allocate a statement handle */
-    SQLAllocHandle(SQL_HANDLE_STMT, dbc, &stmt);
+    (void) SQLAllocHandle(SQL_HANDLE_STMT, dbc, &stmt);
 
-    SQLPrepare(stmt, (SQLCHAR*) "select quantityinstock from products where productcode = ?", SQL_NTS); /*Query*/
+    (void) SQLPrepare(stmt, (SQLCHAR*) "select quantityinstock from products where productcode = ?", SQL_NTS); /*Query*/
 
-    SQLBindParameter(stmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 0, 0, productcode, 0, NULL);
+    (void) SQLBindParameter(stmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 0, 0, productcode, 0, NULL);
         
-    SQLExecute(stmt);
+    (void) SQLExecute(stmt);
 
     /* Loop through the rows in the result-set */
     while (SQL_SUCCEEDED(ret = SQLFetch(stmt))) {
-        ret = SQLGetData(stmt, 1, SQL_C_SLONG, &stock, sizeof(SQLINTEGER), NULL);
+        ret = SQLGetData(stmt, 1, SQL_C_SLONG, &stock, (SQLLEN)sizeof(SQLINTEGER), NULL);
         printf("%d\n", stock);
     }
 
-    SQLCloseCursor(stmt);
+    (void) SQLCloseCursor(stmt);
 
     /* free up statement handle */
-    SQLFreeHandle(SQL_HANDLE_STMT, stmt);
+    (void) SQLFreeHandle(SQL_HANDLE_STMT, stmt);
 
     /* DISCONNECT */
-    ret = odbc_disconnect(env, dbc);
+    ret = (SQLRETURN)odbc_disconnect(env, dbc);
     if (!SQL_SUCCEEDED(ret)) {
+        odbc_extract_error("", stmt, SQL_HANDLE_ENV);
         return EXIT_FAILURE;
     }
 

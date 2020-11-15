@@ -1,0 +1,135 @@
+monte@Monte:/mnt/c/Users/alexm/Desktop/Universidad/2º/EDAT/Prácticas/EDAT-Pr-ctica-2/Entrega práctica 2 - Alejandro Montio - Héctor Martín$  ./menu
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 3
+
+ (1) Find
+ (2) List Products
+ (3) Balance
+ (4) Back
+Introduce un número que corresponda con tu elección > 2
+
+Introduce customernumber > 141
+1982 Camaro Z28 73
+The Titanic 126
+1913 Ford Model T Speedster 30
+2002 Yamaha YZR M1 40
+1968 Dodge Charger 59
+1900s Vintage Tri-Plane 96
+1996 Moto Guzzi 1100i 45
+1932 Model A Ford J-Coupe 40
+1948 Porsche 356-A Roadster 65
+1928 Mercedes-Benz SSK 104
+1957 Ford Thunderbird 75
+1969 Harley Davidson Ultimate Chopper 66
+1937 Horch 930V Limousine 81
+1917 Maxwell Touring Car 36
+1949 Jaguar XK 120 158
+1903 Ford Model A 140
+1962 Volkswagen Microbus 140
+1958 Chevy Corvette Limited Edition 245
+1982 Ducati 900 Monster 83
+1970 Triumph Spitfire 138
+1958 Setra Bus 49
+1995 Honda Civic 41
+1966 Shelby Cobra 427 S/C 122
+American Airlines: MD-11S 79
+1940 Ford Pickup Truck 54
+1965 Aston Martin DB5 101
+1956 Porsche 356A Coupe 161
+1957 Chevy Pickup 183
+1917 Grand Touring Sedan 39
+1937 Lincoln Berline 103
+1936 Harley Davidson El Knucklehead 36
+The USS Constitution Ship 66
+1980âs GM Manhattan Express 41
+Boeing X-32A JSF 71
+F/A 18 Hornet 1/72 59
+2002 Suzuki XREO 21
+2002 Chevy Corvette 174
+Collectable Wooden Train 137
+1969 Chevrolet Camaro Z28 129
+1939 Chevrolet Deluxe Coupe 64
+American Airlines: B767-300 112
+1912 Ford Model T Delivery Wagon 30
+1962 City of Detroit Streetcar 145
+1999 Yamaha Speed Boat 112
+1974 Ducati 350 Mk3 Desmo 82
+1936 Mercedes Benz 500k Roadster 43
+The Schooner Bluenose 89
+1997 BMW R 1100 S 35
+1976 Ford Gran Torino 98
+P-51-D Mustang 70
+1911 Ford Town Car 27
+1997 BMW F650 ST 23
+1952 Citroen-15CV 135
+1993 Mazda RX-7 29
+ATA: B757-300 27
+Diamond T620 Semi-Skirted Tanker 141
+1964 Mercedes Tour Bus 154
+18th century schooner 74
+1928 British Royal Navy Airplane 108
+Pont Yacht 113
+1950's Chicago Surface Lines Streetcar 150
+1972 Alfa Romeo GTA 26
+1992 Porsche Cayenne Turbo Silver 161
+1940 Ford Delivery Sedan 74
+1934 Ford V8 Coupe 24
+1936 Chrysler Airflow 81
+The Mayflower 91
+1932 Alfa Romeo 8C2300 Spider Sport 73
+18th Century Vintage Horse Carriage 29
+1954 Greyhound Scenicruiser 157
+1992 Ferrari 360 Spider red 308
+1948 Porsche Type 356 Roadster 109
+HMS Bounty 73
+1999 Indy 500 Monte Carlo SS 112
+1904 Buick Runabout 123
+1970 Chevy Chevelle SS 454 133
+1998 Chrysler Plymouth Prowler 125
+2003 Harley-Davidson Eagle Drag Bike 56
+1996 Peterbilt 379 Stake Bed with Outrigger 80
+1957 Vespa GS150 59
+1980s Black Hawk Helicopter 74
+1900s Vintage Bi-Plane 63
+1982 Lamborghini Diablo 132
+Corsair F4U ( Bird Cage) 89
+1968 Ford Mustang 20
+1941 Chevrolet Special Deluxe Cabriolet 56
+1938 Cadillac V-16 Presidential Limousine 90
+1957 Corvette Convertible 74
+The Queen Mary 75
+1971 Alpine Renault 1600s 124
+1969 Dodge Charger 80
+1936 Mercedes-Benz 500K Special Roadster 68
+1952 Alpine Renault 1300 50
+1930 Buick Marquette Phaeton 96
+1961 Chevrolet Impala 69
+1970 Dodge Coronet 197
+1970 Plymouth Hemi Cuda 44
+1928 Ford Phaeton Deluxe 89
+1939 Cadillac Limousine 56
+1926 Ford Fire Engine 77
+1969 Corvair Monza 125
+2001 Ferrari Enzo 20
+1969 Ford Falcon 49
+1969 Dodge Super Bee 55
+America West Airlines B757-200 70
+1982 Ducati 996 R 124
+ (1) Find
+ (2) List Products
+ (3) Balance
+ (4) Back
+Introduce un número que corresponda con tu elección > 4
+
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 4
+
+Bye bye

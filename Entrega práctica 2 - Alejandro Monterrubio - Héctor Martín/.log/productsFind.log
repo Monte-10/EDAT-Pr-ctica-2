@@ -1,0 +1,30 @@
+monte@Monte:/mnt/c/Users/alexm/Desktop/Universidad/2º/EDAT/Prácticas/EDAT-Pr-ctica-2/Entrega práctica 2 - Alejandro Montio - Héctor Martín$  ./menu
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 1
+
+ (1) Stock
+ (2) Find
+ (3) Back
+Introduce un número que corresponda con tu elección > 2
+
+Introduce productname > Harley
+S10_1678 1969 Harley Davidson Ultimate Chopper
+S10_4698 2003 Harley-Davidson Eagle Drag Bike
+S18_2625 1936 Harley Davidson El Knucklehead
+ (1) Stock
+ (2) Find
+ (3) Back
+Introduce un número que corresponda con tu elección > 3
+
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 4
+
+Bye bye

@@ -1,0 +1,28 @@
+monte@Monte:/mnt/c/Users/alexm/Desktop/Universidad/2º/EDAT/Prácticas/EDAT-Pr-ctica-2/Entrega práctica 2 - Alejandro Montio - Héctor Martín$  ./menu
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 1
+
+ (1) Stock
+ (2) Find
+ (3) Back
+Introduce un número que corresponda con tu elección > 1
+
+Introduce productcode > S10_1678
+7933
+ (1) Stock
+ (2) Find
+ (3) Back
+Introduce un número que corresponda con tu elección > 3
+
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 4
+
+Bye bye

@@ -1,0 +1,48 @@
+monte@Monte:/mnt/c/Users/alexm/Desktop/Universidad/2º/EDAT/Prácticas/EDAT-Pr-ctica-2/Entrega práctica 2 - Alejandro Montio - Héctor Martín$  ./menu
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 2
+
+ (1) Open
+ (2) Range
+ (3) Detail
+ (4) Back
+
+Introduce un número que corresponda con tu elección > 2
+
+Introduce dos fechas con el siguiente formato (YYYY-MM-DD - YYYY-MM-DD) > 2003-01-10 - 2003-04-21
+10102 2003-01-10 2003-01-14
+10103 2003-01-29 2003-02-02
+10104 2003-01-31 2003-02-01
+10105 2003-02-11 2003-02-12
+10106 2003-02-17 2003-02-21
+10107 2003-02-24 2003-02-26
+10108 2003-03-03 2003-03-08
+10109 2003-03-10 2003-03-11
+10110 2003-03-18 2003-03-20
+10111 2003-03-25 2003-03-30
+10112 2003-03-24 2003-03-29
+10113 2003-03-26 2003-03-27
+10114 2003-04-01 2003-04-02
+10115 2003-04-04 2003-04-07
+10116 2003-04-11 2003-04-13
+10117 2003-04-16 2003-04-17
+10118 2003-04-21 2003-04-26
+ (1) Open
+ (2) Range
+ (3) Detail
+ (4) Back
+
+Introduce un número que corresponda con tu elección > 4
+
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 4
+
+Bye bye

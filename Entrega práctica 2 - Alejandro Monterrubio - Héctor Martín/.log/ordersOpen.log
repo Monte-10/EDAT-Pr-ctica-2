@@ -1,0 +1,44 @@
+monte@Monte:/mnt/c/Users/alexm/Desktop/Universidad/2º/EDAT/Prácticas/EDAT-Pr-ctica-2/Entrega práctica 2 - Alejandro Montio - Héctor Martín$  ./menu
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 2
+
+ (1) Open
+ (2) Range
+ (3) Detail
+ (4) Back
+
+Introduce un número que corresponda con tu elección > 1
+
+10167
+10248
+10260
+10262
+10334
+10401
+10407
+10414
+10420
+10421
+10422
+10423
+10424
+10425
+ (1) Open
+ (2) Range
+ (3) Detail
+ (4) Back
+
+Introduce un número que corresponda con tu elección > 4
+
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 4
+
+Bye bye

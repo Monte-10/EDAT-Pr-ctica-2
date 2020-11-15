@@ -1,0 +1,30 @@
+monte@Monte:/mnt/c/Users/alexm/Desktop/Universidad/2º/EDAT/Prácticas/EDAT-Pr-ctica-2/Entrega práctica 2 - Alejandro Montio - Héctor Martín$  ./menu
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 3
+
+ (1) Find
+ (2) List Products
+ (3) Balance
+ (4) Back
+Introduce un número que corresponda con tu elección > 3
+
+Introduce customernumber > 141
+Balance = -104950.56
+ (1) Find
+ (2) List Products
+ (3) Balance
+ (4) Back
+Introduce un número que corresponda con tu elección > 4
+
+ (1) Products
+ (2) Orders
+ (3) Customers
+ (4) Quit
+
+Enter a number that corresponds to your choice > 4
+
+Bye bye
